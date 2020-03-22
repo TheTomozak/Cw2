@@ -8,6 +8,7 @@ using System.Text.Json.Serialization;
 
 namespace Cw2
 {
+    [Serializable]
     class Student
     {
         // An Attribute is something that is self-contained, i.e., a color, an ID, a name.
@@ -23,11 +24,7 @@ namespace Cw2
 
         [XmlElement("UniversityName")]
         [JsonPropertyName("UniversityName")]
-        public string UniversityName { get; set; }
-
-        [XmlElement("UniversityMode")]
-        [JsonPropertyName("UniversityMode")]
-        public string UniversityMode { get; set; }
+        public Studies studies { get; set; }
 
         [XmlAttribute("index")]
         [JsonPropertyName("index")]
@@ -49,7 +46,9 @@ namespace Cw2
         [JsonPropertyName("NameFather")]
         public string NameFather { get; set; }
 
-
-
+        public override string ToString()
+        {
+            return FirsName + " " + LastName + " " + BirthDate + " " + Email + " " + NameMother + " " + NameFather + " " + studies.UniversityName + " " + studies.UniversityMode;
+        }
     }
 }
