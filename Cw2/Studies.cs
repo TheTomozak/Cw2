@@ -8,7 +8,7 @@ namespace Cw2
 {
 
     [Serializable]
-    class Studies
+    public class Studies
     {
 
         [XmlElement("UniversityName")]

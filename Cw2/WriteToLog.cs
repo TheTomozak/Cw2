@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Cw2.Data
 {
-    class WriteToLog
+   public class WriteToLog
     {
         public static void WriteStudnetsToLog(string log)
         {

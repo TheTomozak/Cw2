@@ -8,7 +8,7 @@ namespace Cw2
 {
 
     [Serializable]
-    class WriteToFile
+    public class WriteToFile
     {
         public static void writeToXML(List<Student> studentsList, string file)
         {
@@ -16,7 +16,7 @@ namespace Cw2
             XmlSerializer serializer = new XmlSerializer(typeof(Uczelnia));
             Uczelnia uczelnia = new Uczelnia
             {
-                studentsList = studentsList,
+                StudentsList = studentsList,
                 Author = "Tomasz Palczewski",
                 CreatedAt = DateTime.Now.ToString()
             };

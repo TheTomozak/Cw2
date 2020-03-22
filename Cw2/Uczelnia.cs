@@ -7,7 +7,7 @@ using System.Xml.Serialization;
 namespace Cw2
 {
     [Serializable]
-    class Uczelnia
+    public class Uczelnia
     {
         [XmlElement("CreatedAt")]
         [JsonPropertyName("CreatedAt")]
@@ -17,7 +17,9 @@ namespace Cw2
         [JsonPropertyName("Author")]
         public string Author { get; set; }
 
-        public List<Student> studentsList { get; set; }
+        [XmlElement("StudentsList")]
+        [JsonPropertyName("StudentsList")]
+        public List<Student> StudentsList { get; set; }
 
     }
 }

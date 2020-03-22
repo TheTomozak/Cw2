@@ -11,7 +11,7 @@ namespace Cw2
 
         static List<Student> studentList = new List<Student>();
 
-        public static List<Student> ReadStudentsFromFile(String file)
+        public static List<Student> ReadStudentsFromFile(string file)
         {
 
             if (File.Exists(file) == false)
@@ -32,9 +32,13 @@ namespace Cw2
                     {
                         WriteToLog.WriteStudnetsToLog(line + " - brak parametru");
                     }
-                    else if (CheckEmptyParameter(student, line)) { }
+                    else if (CheckEmptyParameter(student, line) == false)
+                    {
+                        WriteToLog.WriteStudnetsToLog(line + " - jeden z parametrow jest pusty");
+                    }
                     else
                     {
+                      
                         var st = new Student
                         {
                             FirsName = student[0],
@@ -73,7 +77,7 @@ namespace Cw2
             {
                 if (student[i].Equals(" "))
                 {
-                    WriteToLog.WriteStudnetsToLog(line + " - jeden z parametrow jest pusty");
+                    
                     ifGood = false;
                 }
             }

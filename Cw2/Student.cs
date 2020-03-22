@@ -9,7 +9,7 @@ using System.Text.Json.Serialization;
 namespace Cw2
 {
     [Serializable]
-    class Student
+   public class Student
     {
         // An Attribute is something that is self-contained, i.e., a color, an ID, a name.
         // An Element is something that does or could have attributes of its own or contain other elements.
@@ -48,7 +48,7 @@ namespace Cw2
 
         public override string ToString()
         {
-            return FirsName + " " + LastName + " " + BirthDate + " " + Email + " " + NameMother + " " + NameFather + " " + studies.UniversityName + " " + studies.UniversityMode;
+            return FirsName + " " + LastName + " " + BirthDate + " " + Email +" "+ NameMother +" "+ NameFather+" "+ studies.UniversityName + " " + studies.UniversityMode  ;
         }
     }
 }
