@@ -31,6 +31,9 @@ namespace Cw2
             if (typeFile.Equals("xml"))
             {
                 WriteToFile.writeToXML(studentList, outputFile);
+            }else if (typeFile.Equals("json"))
+            {
+                WriteToFile.writeToJson(studentList, outputFile);
             }
 
 

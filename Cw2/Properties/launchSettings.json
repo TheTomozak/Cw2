@@ -2,7 +2,7 @@
   "profiles": {
     "Cw2": {
       "commandName": "Project",
-      "commandLineArgs": "E:\\PJATK\\SEM_4\\APBD\\Cwiczenia\\Cw2\\Cw2\\Cw2\\Data\\dane.csv E:\\PJATK\\SEM_4\\APBD\\Cwiczenia\\Cw2\\Cw2\\Cw2\\Data\\XMLFile1.xml xml"
+      "commandLineArgs": "E:\\PJATK\\SEM_4\\APBD\\Cwiczenia\\Cw2\\Cw2\\Cw2\\Data\\dane.csv E:\\PJATK\\SEM_4\\APBD\\Cwiczenia\\Cw2\\Cw2\\Cw2\\Data\\result.json json"
     }
   }
 }
