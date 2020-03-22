@@ -30,8 +30,9 @@ namespace Cw2
 
                     if (student.Length < 9)
                     {
-                        WriteToLog.WriteStudnetsToLog(line+" - brak parametru");
+                        WriteToLog.WriteStudnetsToLog(line + " - brak parametru");
                     }
+                    else if (CheckEmptyParameter(student, line)) { }
                     else
                     {
                         var st = new Student
@@ -54,7 +55,7 @@ namespace Cw2
             }
 
             return studentList;
-            
+
         }
         public static string ChangeDate(string date)
         {
@@ -64,6 +65,23 @@ namespace Cw2
             return readyDate;
 
         }
+
+        public static bool CheckEmptyParameter(string[] student, string line)
+        {
+            bool ifGood = true;
+            for (int i = 0; i < student.Length; i++)
+            {
+                if (student[i].Equals(" "))
+                {
+                    WriteToLog.WriteStudnetsToLog(line + " - jeden z parametrow jest pusty");
+                    ifGood = false;
+                }
+            }
+            return ifGood;
+        }
+
+
+
 
 
     }
